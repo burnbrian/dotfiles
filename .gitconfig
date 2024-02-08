@@ -1,6 +1,16 @@
 [user]
   name = burnbrian
   email = 98911252+burnbrian@users.noreply.github.com
+	signingKey = ~/.ssh/id_ed25519_sk.pub
 
 [init]
   defaultBranch = main
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
