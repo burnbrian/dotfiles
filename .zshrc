@@ -1,7 +1,3 @@
-# Export some defaults
-export EDITOR=nvim
-export VISUAL=$EDITOR
-
 # Naked git repo for managing dot files
 alias mydotfiles='git --git-dir=$HOME/.mydotfiles/ --work-tree=$HOME'
 alias mdf=mydotfiles
@@ -14,9 +10,11 @@ gnosis () {
 	$EDITOR "$note_path"
 }
 
-# Export yubikey-agent if installed
-if [[ $(command -v yubikey-agent) ]]; then
-    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
-else
-    echo "No yubikey-agent package found..."
-fi
+# Source
+source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+
+# Pure prompt
+fpath+=($HOME/.config/zsh/prompt/pure)
+autoload -U promptinit; promptinit
+prompt pure
