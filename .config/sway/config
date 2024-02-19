@@ -187,10 +187,8 @@ input "type:keyboard" xkb_options caps:escape
 # Custom Screenshot stuff
 # capture all screens to clipboard    
 bindsym Shift+f12 exec grim - | wl-copy    
-    
 # Capture the specified screen area to clipboard    
 bindsym Shift+Alt+f12 exec grim -g "$(slurp)" - | wl-copy    
-    
 # Capture the focused monitor to clipboard    
 bindsym Shift+Control+f12 exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 
@@ -206,6 +204,8 @@ bindsym XF86MonBrightnessUp exec sudo light -A 10
 bindsym XF86MonBrightnessDown exec sudo light -U 10
 
 # Clamshell configuration for laptop
-set $laptop e-DP-1
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
+# https://www.reddit.com/r/swaywm/comments/eim1k1/conditional_clamshell_mode/
+# Dell Ultrawide == DP-1, Internal 3456x2160 == eDP-1
+set $laptop_screen 'eDP-1'
+bindswitch --reload --locked lid:on exec '[ $(swaymsg -t get_outputs | grep name | wc -l) == 1 ] || (swaymsg output $laptop_screen disable)'
+bindswitch --reload --locked lid:off output $laptop_screen enable
