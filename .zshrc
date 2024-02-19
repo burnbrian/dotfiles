@@ -19,11 +19,11 @@ setopt HIST_FIND_NO_DUPS
 source "$ZSH/functions/extract"
 source "$ZSH/functions/gnosis"
 
+# Theme
+export SPACESHIP_CONFIG="$ZSH/themes/spaceship.zsh"
+source "$ZSH/themes/spaceship-prompt/spaceship.zsh"
+
 # Plugins 
 source "$ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
 source "$ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
-
-# Theme
-source "$ZSH/themes/spaceship-prompt/spaceship.zsh"
-source "$ZSH/themes/spaceship.conf"
