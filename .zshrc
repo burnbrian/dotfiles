@@ -1,11 +1,11 @@
-# Naked git repo for managing dot files
-alias mydotfiles='git --git-dir=$HOME/.mydotfiles/ --work-tree=$HOME'
-alias mdf=mydotfiles
+# Aliases 
+alias mdf='git --git-dir=$HOME/.mydotfiles/ --work-tree=$HOME'
+alias st="$HOME/.bin/swaytree.sh"
 
-# Path
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# Path/s
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.bin"
 
-# Custom ZSH configuration
+# Configuration directory
 export ZSH="$HOME/.config/zsh"
 
 # History
@@ -16,8 +16,9 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
 # Functions
-source "$ZSH/functions/extract"
-source "$ZSH/functions/gnosis"
+for function in "$ZSH/functions"; do
+	source "$function"
+done
 
 # Theme
 export SPACESHIP_CONFIG="$ZSH/themes/spaceship.zsh"
