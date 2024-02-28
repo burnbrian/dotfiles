@@ -25,7 +25,7 @@ include /etc/sway/config-vars.d/*
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /home/brian/Wallpapers/wall_desert_trees.jpg stretch
 
-output * bg #444444 solid_color
+output * bg #333333 solid_color
 
 # Example configuration:
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
