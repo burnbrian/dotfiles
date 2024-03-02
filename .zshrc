@@ -16,7 +16,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 
 # Functions
-for function in "$ZSH/functions"; do
+for function in $ZSH/functions/**/*(.); do
 	source "$function"
 done
 
