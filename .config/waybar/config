@@ -116,8 +116,8 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-good": "80", // An empty format will hide the module
-        "format-full": "95",
+        //"format-good": "80", // An empty format will hide the module
+        //"format-full": "95",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
