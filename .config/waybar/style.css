@@ -115,8 +115,7 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #555555;
-    background-color: #26A65B;
+    color: #ffffff;
 }
 
 @keyframes blink {
@@ -127,7 +126,6 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -193,7 +191,6 @@ label:focus {
 }
 
 #tray {
-    background-color: #555555;
 }
 
 #tray > .passive {
@@ -202,7 +199,6 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
