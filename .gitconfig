@@ -1,10 +1,10 @@
 [user]
-  name = burnbrian
-  email = 98911252+burnbrian@users.noreply.github.com
+	name = burnbrian
+	email = 98911252+burnbrian@users.noreply.github.com
 	signingkey = /home/brian/.ssh/id_ed25519_sk.pub 
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
 
 [gpg]
 	format = ssh
