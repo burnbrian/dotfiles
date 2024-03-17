@@ -209,3 +209,8 @@ bindsym XF86MonBrightnessDown exec sudo light -U 10
 set $laptop_screen 'eDP-1'
 bindswitch --reload --locked lid:on exec '[ $(swaymsg -t get_outputs | grep name | wc -l) == 1 ] || (swaymsg output $laptop_screen disable)'
 bindswitch --reload --locked lid:off output $laptop_screen enable
+
+# Keyboard modification
+input "type:touchpad" {
+	tap enabled
+}
