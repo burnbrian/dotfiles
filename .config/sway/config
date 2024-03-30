@@ -24,8 +24,10 @@ include /etc/sway/config-vars.d/*
 # Output configuration
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /home/brian/Wallpapers/wall_desert_trees.jpg stretch
+# "stretch", "fill", "fit", "center", "tile"
 
-output * bg #333333 solid_color
+output * bg #222222 solid_color
+output * bg /home/brian/Wallpapers/leet_wallpaper.jpeg tile
 
 # Example configuration:
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -179,7 +181,7 @@ bar {
 include /etc/sway/config.d/*
 
 # Set the gaps
-gaps inner 4
+gaps inner 6
 
 # Set CAPS lock key as ESC
 input "type:keyboard" xkb_options caps:escape
