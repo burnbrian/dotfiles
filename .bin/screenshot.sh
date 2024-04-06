@@ -6,8 +6,8 @@ set -e
 #MENU="rofi -i -dmenu -u 6,7,8,9"
 MENU="wofi -i -demnu -u 6,7,8,9"
 RECORDER=wf-recorder
-TARGET=$(xdg-user-dir PICTURES)/screenshots
-TARGET_VIDEOS=$(xdg-user-dir VIDEOS)/recordings
+TARGET=$(xdg-user-dir PICTURES)/Screenshots
+TARGET_VIDEOS=$(xdg-user-dir VIDEOS)/Recordings
 NOTIFY=$(pidof mako || pidof dunst) || true
 FOCUSED=$(swaymsg -t get_tree | jq '.. | ((.nodes? + .floating_nodes?) // empty) | .[] | select(.focused and .pid) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')
 OUTPUTS=$(swaymsg -t get_outputs | jq -r '.[] | select(.active) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')

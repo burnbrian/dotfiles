@@ -1,0 +1,12 @@
+[Added Associations]
+text/plain=code.desktop;
+application/pdf=firefox-esr.desktop;
+application/zip=org.gnome.Nautilus.desktop;
+image/jpeg=gimp.desktop;
+
+[Default Applications]
+text/html=firefox-esr.desktop
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+x-scheme-handler/about=firefox-esr.desktop
+x-scheme-handler/unknown=firefox-esr.desktop
