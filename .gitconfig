@@ -1,7 +1,7 @@
 [user]
 	name = burnbrian
 	email = 98911252+burnbrian@users.noreply.github.com
-	signingkey = /home/brian/.ssh/id_ed25519_sk.pub 
+	signingkey = ~/.ssh/id_ed25519_sk.pub 
 
 [init]
 	defaultBranch = main
@@ -16,4 +16,4 @@
 	gpgsign = true
 
 [gpg "ssh"]
-	allowedSignersFile = /home/brian/.ssh/allowed_signers
+	allowedSignersFile = ~/.ssh/allowed_signers
