@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # https://www.atlassian.com/git/tutorials/dotfiles 
-# curl -ks https://raw.githubusercontent.com/burnbrian/mydotfiles/main/.bin/mydotfiles.sh | bash
+# curl -ks https://raw.githubusercontent.com/burnbrian/dotfiles/main/.bin/install.sh | bash
 
 # Variables
-MYDOTFILE_DIR="$HOME/.mydotfiles"
+MYDOTFILE_DIR="$HOME/.dotfiles"
+URL="https://github.com/burnbrian/dotfiles.git"
 
 # Check if MYDOTFILE_DIR is there
 if [ -d "$MYDOTFILE_DIR" ]; then
@@ -13,7 +14,7 @@ fi
 
 # Clone use HTTPS
 printf "%s\n" "Cloning remote repository..."
-git clone --bare https://github.com/burnbrian/mydotfiles.git $MYDOTFILE_DIR
+git clone --bare $URL $MYDOTFILE_DIR
 
 # Mydotfile function
 function mdf {
@@ -26,4 +27,4 @@ mdf checkout -f
 mdf config status.showUntrackedFiles no
 
 # Set remote to SSH > HTTPS
-mdf remote set-url origin git@github.com:burnbrian/mydotfiles.git
+mdf remote set-url origin git@github.com:burnbrian/dotfiles.git
